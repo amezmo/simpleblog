@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Library\apiHelpers;
+use App\Http\Library\ApiHelpers;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class ControllerExample extends Controller {
-
-    use apiHelpers;
+class ControllerExample extends Controller 
+{
+    use ApiHelpers;
 
     public function post(Request $request): \Illuminate\Http\JsonResponse
     {

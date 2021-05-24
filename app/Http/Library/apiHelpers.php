@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Library;
 
-trait apiHelpers
+trait ApiHelpers
 {
     /**
      * Check if token has admin ability

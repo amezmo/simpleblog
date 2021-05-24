@@ -19,9 +19,11 @@ class RestrictRegistrationToOneAdmin
     public function handle(Request $request, Closure $next)
     {
         $user = DB::table('users')->select('role')->where('id',1)->first();
-        if ($user && (int)$user->role === 1){
+        
+        if ($user && (int)$user->role === 1) {
             return redirect("/"); // fail silently if we already have a user with that role
         }
+
         return $next($request);
     }
 }
